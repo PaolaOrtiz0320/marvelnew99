@@ -1,0 +1,199 @@
+/* Estilos generales */
+:root {
+    --primary-color: #8f0707; /* Rojo característico de Marvel */
+    --secondary-color: #031646; /* Azul marino en hover */
+    --text-color: #fff; /* Color de texto predeterminado */
+    --background-color: #050505; /* Color de fondo oscuro */
+    --primary-font: Cooming Sans MT, sans-serif; /* Fuente primaria */
+    
+}
+
+body {
+    font-family: var(--primary-font); /* Utiliza la variable para la fuente */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6; /* Altura de línea predeterminada */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0; /* Elimina el margen superior predeterminado de los encabezados */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+#universo {
+    font-family: Vogue;
+    font-size: 45px;
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #808080; /* Cambio de color a gris claro al pasar el mouse */
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 50px;
+}
+
+/* Estilos para el video */
+#video {
+    background-color: #3f3b3b;
+    color: var(--text-color);
+    padding: 50px;
+    text-align: center;
+}
+
+#video iframe {
+    width: 80%;
+    height: 400px;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel .carousel-inner {
+    display: flex;
+}
+
+.carousel img {
+    width: auto;
+    max-height: 200px;
+    margin: 0 10px;
+    transition: transform 0.5s ease;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1; /* Asegura que las flechas estén por encima de las imágenes */
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+/* Estilos para el contenido */
+.content {
+    padding: 50px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Botón con efecto hover */
+.boton {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Espaciador */
+.content:last-child {
+    margin-bottom: 100px; /* Ajusta el margen inferior para evitar que el footer tape el botón */
+}
+
+/* Estilos para las imágenes en las secciones de Películas y Cómics */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-wrapper {
+    text-align: center; /* Alinea el texto al centro */
+    margin: 20px; /* Añade margen alrededor de cada imagen */
+}
+
+.image-wrapper img {
+    width: 200px; /* Establece el ancho deseado para las imágenes */
+    height: auto; /* Autoajusta la altura para mantener la proporción */
+}
+
+.image-wrapper p {
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+/* Estilos para los números en el texto */
+.numero,
+.numero1, 
+.año {
+    color: gray; /* Cambia el color de los números a gris */
+}
+
+/* Estilo para la primera letra del párrafo de historia */
+#Historia1::first-letter {
+    color: rgb(221, 21, 21); /* Cambia el color de la primera letra a rojo */
+}
+
+/* Estilos para hacer la página web responsiva */
+@media screen and (max-width: 768px) {
+    /* Ajusta el tamaño de la fuente del encabezado */
+    header {
+        padding: 10px;
+    }
+
+    /* Ajusta el tamaño de las imágenes del carrusel */
+    .carousel img {
+        max-height: 150px;
+    }
+
+    /* Ajusta el tamaño de las imágenes en las secciones de Películas y Cómics */
+    .image-wrapper img {
+        width: 150px;
+    }
+}
